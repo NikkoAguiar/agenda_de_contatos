@@ -27,7 +27,7 @@ header h1{
 }
 
 .container{
-    max-width: 800px;
+    max-width: 640px;
     width: 100%;
     margin: 0 auto;
 }
@@ -36,26 +36,42 @@ form input{
     font-size: 20px;
     background-color: #fff;
     border: none;
+    border-radius: 7px;
     border-bottom: 2px solid #000;
 }
 
+#mensagem_erro{
+    display: none;
+    background-color: red;
+    color: white;
+    padding: 8px auto;
+}
+
+#mensagem_erro_2{
+    display: none;
+    background-color: red;
+    color: white;
+    padding: 8px auto;
+}
+
 form{
-    display: flex;
+    display: grid;
     max-width: 640px;
     width: 100%;
     justify-content: space-between;
 }
 
 form button{
-    background-color: #009432;
+    background-color: #FF7100;
     color: #FFF;
     font-size: 20px;
     border: none;
+    border-radius: 7px;
     cursor: pointer;
 }
 
 button:hover{
-    background-color: #27ae60;
+    background-color: #FF7B12;
 }
 
 table{
