@@ -5,26 +5,29 @@ let linhas = '';
 const inputContato = document.getElementById('campo_1');
 const inputNumero = document.getElementById('campo_2');
 const containerMensagemErro = document.getElementById('mensagem_erro');
-// const containerMensagemErro2 = document.getElementById('mensagem_erro_2');
+const containerMensagemErro2 = document.getElementById('mensagem_erro_2');
 // const containerMensagemErroNumero = document.getElementById('mensagem_erro_numero');
 const botao = document.getElementById('botao');
 
-// inputContato.addEventListener('keyup', function(e){
-//     e.preventDefault();
-    // const mensagemErro2 = `O primeiro nome deve conter pelo menos 3 letras`;
-    // contatos.push(inputContato.value);
-    // if(contatos.length <= 3){
-    //     containerMensagemErro2.innerHTML = mensagemErro2;
-    //     containerMensagemErro2.style.display = 'block';
-    // }else if(contatos.includes('')){
-    //     containerMensagemErro2.innerHTML = mensagemErro2;
-    //     containerMensagemErro2.style.display = 'block';
-    //     contatos.pop(inputContato.value);
-    //     console.log(contatos);
-    // }else if(contatos.length > 3){
-    //     containerMensagemErro2.style.display = 'none';
-    // }
-// })
+inputContato.addEventListener('keyup', function(e){
+    e.preventDefault();
+    const mensagemErro2 = `O primeiro nome deve conter pelo menos 3 letras`;
+    contatos.push(inputContato.value);
+    if(contatos.length <= 3){
+        containerMensagemErro2.innerHTML = mensagemErro2;
+        containerMensagemErro2.style.display = 'block';
+        document.getElementById('botao').disabled = true;
+    }if(contatos.includes('')){
+        containerMensagemErro2.innerHTML = mensagemErro2;
+        containerMensagemErro2.style.display = 'block';
+        contatos.pop(inputContato.value);
+        console.log(contatos);
+        document.getElementById('botao').disabled = true;
+    }else if(contatos.length > 3){
+        containerMensagemErro2.style.display = 'none';
+        document.getElementById('botao').disabled = false;
+    }
+})
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
